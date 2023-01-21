@@ -1,16 +1,16 @@
-name: Min-test
+name: Super-Linter
 
 on: push
 
 jobs:
-  Min-test:
+  super-lint:
     name: Lint code base
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Run Min-test
+      - name: Run Super-Linter
         uses: github/super-linter@v4
         env:
           DEFAULT_BRANCH: main
