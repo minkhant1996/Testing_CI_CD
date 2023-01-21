@@ -1,4 +1,8 @@
-def test_pass():
-    print("Test is passed")
-  
-test_pass()
+def test(a, b):
+    return a + b
+
+a = 1
+b = 2
+x = test(a, b)
+print("x = ", x)
+print("Test is passed")
