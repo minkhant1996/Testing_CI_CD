@@ -1,17 +1,17 @@
-name: Min_testing
+name: Super-Linter
 
 on: push
+
 jobs:
-  Min_testing:
-    name: Min code base
+  super-lint:
+    name: Lint code base
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v2
-      
-      - name: Run Min_testing
-      - uses: actions/checkout@v3
+        uses: actions/checkout@v2
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
         env:
-         DEFAULT_BRANCH: main
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
