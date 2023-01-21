@@ -1,1 +1,17 @@
+name: Min_testing
 
+on: push
+jobs:
+  Min_testing:
+    name: Min code base
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v1
+      
+      - name: Run Min_testing
+      - uses: actions/checkout@v2
+        env:
+         DEFAULT_BRANCH: main
+         GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        
